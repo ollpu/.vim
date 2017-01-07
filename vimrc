@@ -14,6 +14,7 @@ set splitright
 set ruler
 set incsearch
 
+set showcmd
 
 syntax enable
 set encoding=utf8
@@ -32,7 +33,7 @@ set cursorline
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
   exe "normal mz"
-  %s/\s\+$//ge
+  %s/\(\S\+\)\s\+$/\1/ge
   exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()

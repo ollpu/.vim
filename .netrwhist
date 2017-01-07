@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/ollpu/Dropbox/DT17/ht'
-let g:netrw_dirhist_2='/home/ollpu/Koodi/CF'
-let g:netrw_dirhist_3='/home/ollpu/GitHub'
-let g:netrw_dirhist_4='/home/ollpu/GitHub/Audionodes'
-let g:netrw_dirhist_5='/home/ollpu/Koodi/CF'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/ollpu/Dropbox'
+let g:netrw_dirhist_2='/home/ollpu/Dropbox/DT17'
+let g:netrw_dirhist_3='/home/ollpu/Dropbox/DT17/tester'
+let g:netrw_dirhist_4='/home/ollpu/Dropbox/DT17'
+let g:netrw_dirhist_5='/home/ollpu/Dropbox/DT17/buster'
+let g:netrw_dirhist_6='/home/ollpu/Dropbox/DT17'
