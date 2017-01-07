@@ -26,7 +26,8 @@ set tabstop=2
 set ai
 set si
 
-set colorcolumn=80
+set colorcolumn=81
+set cursorline
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
@@ -37,20 +38,19 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
-colorscheme fu
+colorscheme molokai
 set t_ut=
 " highlight Normal ctermbg=none
-set cursorline
-highlight ColorColumn ctermbg=235
-runtime autoload/netrw.vim
-highlight CursorLine ctermbg=233 cterm=none
+highlight ColorColumn ctermbg=234
+highlight CursorLine ctermbg=none cterm=none
+highlight MatchParen ctermbg=232 ctermfg=208
 
 inoremap <CR> <CR>x<BS>
-nnoremap o op<BS>
-nnoremap O Op<BS>
+nnoremap o ox<BS>
+nnoremap O Ox<BS>
 
 inoremap ¤ <Esc>
 inoremap <S-Tab> <Esc><<i
 inoremap <C-Tab> <Esc>>>i
 
-
+inoremap {<CR> {<CR>}<Esc>Ox<BS>
