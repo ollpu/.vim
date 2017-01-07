@@ -2,6 +2,7 @@ language en_GB.utf8
 
 let mapleader=","
 
+set nocompatible
 
 set number
 
@@ -39,14 +40,17 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 colorscheme fu
 set t_ut=
 " highlight Normal ctermbg=none
-highlight ColorColumn ctermbg=234
-highlight ColorRow ctermbg=234
+set cursorline
+highlight ColorColumn ctermbg=235
+runtime autoload/netrw.vim
+highlight CursorLine ctermbg=233 cterm=none
 
 inoremap <CR> <CR>x<BS>
 nnoremap o op<BS>
 nnoremap O Op<BS>
 
-inoremap <C-Space> <Esc>
+inoremap ¤ <Esc>
 inoremap <S-Tab> <Esc><<i
 inoremap <C-Tab> <Esc>>>i
+
 
