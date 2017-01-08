@@ -1,12 +1,12 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
-	url = gh:tpope/vim-surround
+	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/vim-autoclose"]
 	path = bundle/vim-autoclose
-	url = gh:Townk/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose.git
 [submodule "bundle/fu"]
 	path = bundle/fu
-	url = gh:vim-scripts/fu
+	url = https://github.com/vim-scripts/fu.git
 [submodule "bundle/molokai"]
 	path = bundle/molokai
-	url = gh:tomasr/molokai
+	url = https://github.com/tomasr/molokai.git
