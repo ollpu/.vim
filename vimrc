@@ -17,6 +17,7 @@ set ruler
 set incsearch
 
 set showcmd
+set laststatus=2
 
 syntax enable
 set encoding=utf8
