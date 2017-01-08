@@ -1,5 +1,7 @@
 language en_GB.utf8
 
+execute pathogen#infect()
+
 let mapleader=","
 
 set nocompatible
