@@ -16,6 +16,8 @@ set splitright
 set ruler
 set incsearch
 
+set autoread
+
 set showcmd
 set laststatus=2
 
