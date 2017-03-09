@@ -61,3 +61,5 @@ inoremap <S-Tab> <Esc><<i
 inoremap <C-Tab> <Esc>>>i
 
 inoremap {<CR> {<CR>}<Esc>Ox<BS>
+
+nnoremap , :
