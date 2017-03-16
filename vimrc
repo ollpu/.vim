@@ -1,5 +1,6 @@
 language en_GB.utf8
 
+let g:AutoCloseProtectedRegions=["Comment"]
 execute pathogen#infect()
 
 let mapleader=","
@@ -32,6 +33,7 @@ set tabstop=2
 set ai
 set si
 autocmd FileType python setlocal softtabstop=4 shiftwidth=4 ts=4 cinwords=if,elif,else,for,while,try,except,finally,def,class
+
 
 set colorcolumn=81
 set cursorline
