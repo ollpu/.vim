@@ -38,6 +38,8 @@ autocmd FileType python setlocal softtabstop=4 shiftwidth=4 ts=4 cinwords=if,eli
 set colorcolumn=81
 set cursorline
 
+set scrolloff=8
+
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
   exe "normal mz"
