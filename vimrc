@@ -25,6 +25,8 @@ set laststatus=2
 syntax enable
 set encoding=utf8
 
+set ignorecase smartcase
+
 set smarttab
 set expandtab
 set softtabstop=2
