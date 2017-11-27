@@ -63,8 +63,7 @@ nnoremap o ox<BS>
 nnoremap O Ox<BS>
 
 inoremap § <Esc>
-inoremap <S-Tab> <Esc><<i
-inoremap <C-Tab> <Esc>>>i
+
 
 inoremap {<CR> {<CR>}<Esc>Ox<BS>
 
