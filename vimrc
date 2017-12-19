@@ -1,6 +1,5 @@
 language en_GB.utf8
 
-let g:AutoCloseProtectedRegions=["Comment"]
 execute pathogen#infect()
 
 let mapleader=","
@@ -62,9 +61,7 @@ inoremap <CR> <CR>x<BS>
 nnoremap o ox<BS>
 nnoremap O Ox<BS>
 
-inoremap § <Esc>
-
-
 inoremap {<CR> {<CR>}<Esc>Ox<BS>
+inoremap § <Esc>
 
 nnoremap , :
