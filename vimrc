@@ -28,7 +28,6 @@ set ignorecase smartcase
 
 set smarttab
 set expandtab
-set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 set ai
@@ -40,6 +39,8 @@ set colorcolumn=81
 set cursorline
 
 set scrolloff=8
+
+set title
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
