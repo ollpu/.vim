@@ -41,6 +41,7 @@ set cursorline
 set scrolloff=8
 
 set title
+set titleold=
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
