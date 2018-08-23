@@ -66,4 +66,14 @@ nnoremap O Ox<BS>
 inoremap {<CR> {<CR>}<Esc>Ox<BS>
 inoremap § <Esc>
 
+func! IncludeGuard()
+  let h = tr(toupper(expand("%")), ".", "_")
+  call append(0, "#ifndef ".h)
+  call append(1, "#define ".h)
+  call append(2, "")
+  call append(line("$"), "")
+  call append(line("$"), "#endif")
+endfunc
+nnoremap -h :call IncludeGuard()<CR>
+
 nnoremap , :
