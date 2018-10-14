@@ -43,6 +43,8 @@ set scrolloff=8
 set title
 set titleold=
 
+set mouse=a
+
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
   exe "normal mz"
@@ -67,7 +69,7 @@ inoremap {<CR> {<CR>}<Esc>Ox<BS>
 inoremap § <Esc>
 
 func! IncludeGuard()
-  let h = tr(toupper(expand("%")), ".", "_")
+  let l:h = tr(toupper(expand("%")), ".", "_")
   call append(0, "#ifndef ".h)
   call append(1, "#define ".h)
   call append(2, "")
