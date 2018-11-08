@@ -44,6 +44,7 @@ set title
 set titleold=
 
 set mouse=a
+set ttimeoutlen=10
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
