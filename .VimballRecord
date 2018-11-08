@@ -1,0 +1,1 @@
+amsmath.vba: call delete('/home/ollpu/.vim/after/syntax/tex/amsmath.vim')
