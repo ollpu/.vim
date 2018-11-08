@@ -1,8 +1,8 @@
 # .vim
-vim configuration (+ .vimrc)
+vim configuration
 
 ## Installation
 ```bash
 git clone --recursive https://github.com/ollpu/.vim ~/.vim
-ln -s ~/.vim/vimrc ~/.vimrc
 ```
+Make sure `~/.vimrc` doesn't exist (or links to `~/.vim/vimrc`)
