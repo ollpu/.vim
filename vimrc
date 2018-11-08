@@ -70,6 +70,7 @@ nnoremap o ox<BS>
 nnoremap O Ox<BS>
 
 inoremap {<CR> {<CR>}<Esc>Ox<BS>
+noremap § <Esc>
 inoremap § <Esc>
 
 func! IncludeGuard()
