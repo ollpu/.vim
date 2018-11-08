@@ -46,6 +46,9 @@ set titleold=
 set mouse=a
 set ttimeoutlen=10
 
+" Speed up PHP syntax somewhat
+let g:php_var_selector_is_identifier=1
+
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
   exe "normal mz"
