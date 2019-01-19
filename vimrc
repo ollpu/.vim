@@ -33,9 +33,12 @@ set tabstop=2
 set ai
 set si
 autocmd FileType python setlocal softtabstop=4 shiftwidth=4 ts=4 cinwords=if,elif,else,for,while,try,except,finally,def,class
-
+autocmd FileType rust setlocal softtabstop=4 shiftwidth=4 ts=4
+" The PHP syntax is painfully slow
+autocmd FileType php setlocal nocursorline
 
 set colorcolumn=81
+" only visible in the line number bar
 set cursorline
 
 set scrolloff=8
@@ -84,3 +87,7 @@ endfunc
 nnoremap -h :call IncludeGuard()<CR>
 
 nnoremap , :
+
+if has("nvim")
+  autocmd TermOpen * setlocal nonumber
+end
