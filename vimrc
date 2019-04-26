@@ -36,6 +36,8 @@ autocmd FileType python setlocal softtabstop=4 shiftwidth=4 ts=4 cinwords=if,eli
 autocmd FileType rust setlocal softtabstop=4 shiftwidth=4 ts=4
 " The PHP syntax is painfully slow
 autocmd FileType php setlocal nocursorline
+autocmd FileType tex setlocal nocursorline
+autocmd FileType ruby setlocal nocursorline
 
 set colorcolumn=81
 " only visible in the line number bar
@@ -77,7 +79,7 @@ noremap § <Esc>
 inoremap § <Esc>
 
 func! IncludeGuard()
-  let l:h = tr(toupper(expand("%")), ".", "_")
+  let l:h = tr(toupper(expand("%:t")), ".", "_")
   call append(0, "#ifndef ".h)
   call append(1, "#define ".h)
   call append(2, "")
