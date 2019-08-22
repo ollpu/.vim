@@ -90,6 +90,35 @@ nnoremap -h :call IncludeGuard()<CR>
 
 nnoremap , :
 
+function! MakeSession()
+  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  if (filewritable(b:sessiondir) != 2)
+    exe 'silent !mkdir -p ' b:sessiondir
+    redraw!
+  endif
+  let b:filename = b:sessiondir . '/session.vim'
+  exe "mksession! " . b:filename
+  echo "Session saved to " . b:filename
+endfunction
+
+function! LoadSession()
+  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  let b:sessionfile = b:sessiondir . "/session.vim"
+  if (filereadable(b:sessionfile))
+    exe 'source ' b:sessionfile
+  else
+    echo "No session loaded."
+  endif
+endfunction
+
+nnoremap -s :call MakeSession()<CR>
+nnoremap -l :call LoadSession()<CR>
+command SessionQuit call MakeSession() | wqa
+cnoreabbrev sq SessionQuit
+
+set ssop-=options
+set ssop-=folds
+
 if has("nvim")
   autocmd TermOpen * setlocal nonumber
 end
