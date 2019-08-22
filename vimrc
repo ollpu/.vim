@@ -113,6 +113,8 @@ endfunction
 
 nnoremap -s :call MakeSession()<CR>
 nnoremap -l :call LoadSession()<CR>
+command MakeSession call MakeSession()
+command LoadSession call LoadSession()
 command SessionQuit call MakeSession() | wqa
 cnoreabbrev sq SessionQuit
 
