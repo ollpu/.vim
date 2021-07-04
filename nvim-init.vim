@@ -24,14 +24,26 @@ EOF
 
 lua <<EOF
 local nvim_lsp = require'lspconfig'
+local lsp_status = require'lsp-status'
+lsp_status.register_progress()
+lsp_status.config({
+  indicator_errors = 'E',
+  indicator_warnings = 'W',
+  indicator_info = 'i',
+  indicator_hint = '?',
+  indicator_ok = 'Ok',
+  status_symbol = 'LS',
+})
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities = vim.tbl_extend('keep', capabilities or {}, lsp_status.capabilities)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+  lsp_status.on_attach(client)
 
   --Enable completion triggered by <c-x><c-o>
   --buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -72,8 +84,25 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
-
 EOF
+
+function! LspStatus() abort
+  if luaeval('#vim.lsp.buf_get_clients() > 0')
+    return luaeval("require('lsp-status').status()")
+  endif
+
+  return ''
+endfunction
+
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'lspstatus' ] ]
+      \ },
+      \ 'component_function': {
+      \   'lspstatus': 'LspStatus'
+      \ },
+      \ }
 
 lua << EOF
 -- Compe setup
